@@ -134,15 +134,15 @@ html.dark-mode .theme-switch {
 
 html.dark-mode #switch-label {
   color: #fff;
-  transform: translateX(-28px); /* 🔸 Ajusta pra manter alinhado */
+  transform: translateX(-28px); 
 }
 
 html:not(.dark-mode) .switch-btn {
-  transform: translateX(-8px); /* 🔸 Ajusta para ficar alinhada à esquerda */
+  transform: translateX(-8px); 
 }
 
 html.dark-mode .switch-btn {
-  transform: translateX(57px); /* 🔸 Deslocamento menor, pois o botão está mais estreito */
+  transform: translateX(57px); 
 }
 
 
@@ -211,7 +211,7 @@ html.dark-mode .switch-btn {
   left: 0;
   width: 100%;
   z-index: 99999999;
-  height: 75px; /* 🔥 controla a altura da barra */
+  height: 75px; 
   background-color: var(--text-1);
   display: flex;
   align-items: center;
@@ -1227,7 +1227,7 @@ button.next:hover {
 /* =================== RESPONSIVO =================== */
 @media (max-width: 1200px) {
   .testimonial-card {
-    flex: 0 0 calc(100% / 2 - 1rem); /* 2 cards no tablet */
+    flex: 0 0 calc(100% / 2 - 1rem); /* tablet */
   }
 }
 
