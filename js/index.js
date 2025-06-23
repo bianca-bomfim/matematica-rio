@@ -184,12 +184,12 @@ function toggleTheme() {
   if (darkMode) {
     icon.src = 'imagens/dark.png';
     icon.alt = 'Tema atual: escuro';
-    label.textContent = 'NIGHTMODE';
+    label.textContent = 'ESCURO';
     button.setAttribute('aria-pressed', 'true');
   } else {
     icon.src = 'imagens/light.png';
     icon.alt = 'Tema atual: claro';
-    label.textContent = 'DAYMODE';
+    label.textContent = 'CLARO';
     button.setAttribute('aria-pressed', 'false');
   }
 }

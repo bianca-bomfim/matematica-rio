@@ -86,18 +86,18 @@ video {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 160px;
-  height: 50px;
+  width: 100px; /* 🔸 Diminui na largura */
+  height: 36px;
   background-color: #f1f1f1;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 5px 10px;
+  justify-content: center; /* 🔸 Centraliza tudo */
+  gap: 8px; /* 🔸 Espaço entre a bolinha e o texto */
+  padding: 4px 8px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  height: 40px;
 }
 
 .theme-switch:hover {
@@ -110,8 +110,8 @@ html.dark-mode .theme-switch {
 
 .switch-btn {
   background-color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -121,27 +121,30 @@ html.dark-mode .theme-switch {
 }
 
 .switch-btn img {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 #switch-label {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #333;
-  transition: color 0.4s ease;
+  transition: color 0.4s ease, transform 0.4s ease;
 }
 
 html.dark-mode #switch-label {
   color: #fff;
-  transform: translateX(-45px);
-  transition: color 0.4s ease, transform 0.4s ease;
+  transform: translateX(-28px); /* 🔸 Ajusta pra manter alinhado */
 }
 
-/* Animação botão */
-html.dark-mode .switch-btn {
-  transform: translateX(100px);
+html:not(.dark-mode) .switch-btn {
+  transform: translateX(-8px); /* 🔸 Ajusta para ficar alinhada à esquerda */
 }
+
+html.dark-mode .switch-btn {
+  transform: translateX(57px); /* 🔸 Deslocamento menor, pois o botão está mais estreito */
+}
+
 
 .d-flex {
   display: flex;
