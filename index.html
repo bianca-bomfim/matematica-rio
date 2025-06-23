@@ -21,70 +21,44 @@
     <title>Matemática Rio</title>
   </head>
   <body>
-    <!-- header -->
-    <header class="header" id="header">
-      <div class="navigation">
-        <nav class="nav d-flex">
-          <div class="logo">
-            <a href="./imagens/logo.png">
-            </a>
-          </div>
-          <ul class="nav-list d-flex">
-            <li class="nav-item">
-              <a href="#header" class="nav-link">Início</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">Curso</a>
-            </li>
-            <li class="nav-item">
-              <a href="#service" class="nav-link">Assinatura</a>
-            </li>
-            <li class="nav-item">
-              <a href="#trips" class="nav-link">Conteúdos</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Localização</a>
-            </li>
-          </ul>
 
-          <a href="https://membros.matematicario.com.br/pt/auth/entrar" class="btn sign-up" >Já Sou Aluno</a>
+<div class="navigation">
+  <nav class="nav d-flex">
+    <div class="logo">
+      <a href="#header">
+        <img src="./imagens/logoMat.png" alt="Logo">
+      </a>
+    </div>
+    <ul class="nav-list d-flex">
+      <li class="nav-item"><a href="#header" class="nav-link">Início</a></li>
+      <li class="nav-item"><a href="#about" class="nav-link">Curso</a></li>
+      <li class="nav-item"><a href="#service" class="nav-link">Assinatura</a></li>
+      <li class="nav-item"><a href="#trips" class="nav-link">Conteúdos</a></li>
+      <li class="nav-item"><a href="#students" class="nav-link">Aprovados</a></li>
+      <li class="nav-item"><a href="#contact" class="nav-link">Localização</a></li>
+    </ul>
 
-          <label for="switch" class= "darkText">
-            <input type="checkbox" id="switch"> Modo Escuro
-          </label>
-          
-          
-          <div class="hamburger">
-            <i class="bx bx-menu-alt-left"></i>
-          </div>
-        </nav>
+    <a href="https://membros.matematicario.com.br/pt/auth/entrar" class="btn sign-up">Já Sou Aluno</a>
+
+    <button class="theme-switch" onclick="toggleTheme()" aria-pressed="false" aria-label="Alternar modo claro e escuro">
+      <div class="switch-btn">
+        <img id="switch-icon" src="imagens/light.png" alt="Tema atual: claro">
       </div>
+      <span id="switch-label">DAYMODE</span>
+    </button>
 
-      <div class="swiper-container slider-1">
-        <div class="swiper-wrapper">
-          <div class="swiper-wrapper">
-            <video muted loop autoplay>
-              <source src="./imagens/banneroficial.mp4" type="video/mp4" />
-            </video>
-          </div>
+    <div class="hamburger">
+      <i class="bx bx-menu-alt-left"></i>
+    </div>
+  </nav>
+</div>
 
-      <div class="content">
-        <h1>
-          
-          <br> 
-        </h1>
-        <a href="Login.html" class=""> </a>
-      </div>
-
-      <div class="arrows d-flex">
-        <div class="swiper-prev d-flex">
-          <i class="bx bx-chevron-left swiper-icon"></i>
-        </div>
-        <div class="swiper-next d-flex">
-          <i class="bx bx-chevron-right swiper-icon"></i>
-        </div>
-      </div>
-    </header>
+<header class="header" id="header">
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="./imagens/bannerFinal1.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo.
+  </video>
+</header>
 
     <main class="main">
       <section class="section about" id="about">
@@ -108,7 +82,7 @@
                   </video>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./imagens/matRio1.jpg" alt="">
+                    <img src="./imagens/cartaz.jpg" alt="">
               </div>
               <div class="swiper-button-next">
                 <i class="bx bx-chevron-right swiper-icon"></i>
@@ -153,23 +127,34 @@
           </div>
         </div>
       </section>
-
+      
       <section class="section discount">
         <div class="overlay">
-          <video class="video">
+          <video class="video" muted preload="metadata" playsinline>
             <source src="./imagens/indiaProcopio1.mp4" type="video/mp4" />
           </video>
         </div>
+      
         <div class="content">
-          <h1>Metodologia Diferenciada
-            <br />
-          </h1>
-          <a href="https://www.greenpeace.org/brasil/blog/cupula-da-amazona-veja-as-propostas-do-greenpeace-brasil/?appeal=21057&utm_source=google&utm_medium=paid&utm_campaign=florestas&utm_content=aq_20230810_grants&utm_term=cop%20brasil&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=7235609613&hsa_cam=19664562138&hsa_grp=152673481135&hsa_ad=669464155560&hsa_src=g&hsa_tgt=kwd-2178551889983&hsa_kw=cop%20brasil&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQiAuou6BhDhARIsAIfgrn7W8o6GPRocR9ntmn8c_PqlmkOIufqqVknxMx0Lix2xvGMCG5SxSz0aAk8oEALw_wcB" 
-          target="_blank" class="bt"> </a>
-          <span class="video-control d-flex"><i class="bx bx-play"></i></span>
+          <h1>Metodologia Diferenciada</h1>
+      
+          <span class="video-control d-flex" onclick="openVideo()">
+            <i class="bx bx-play"></i>
+          </span>
         </div>
       </section>
-
+      
+      <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeVideo()">&times;</span>
+          <video id="modalVideo" controls>
+            <source src="./imagens/indiaProcopio1.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo.
+          </video>
+          
+        </div>
+      </div>
+      
       <section class="section trip" id="trips">
         <div class="title">
           <h1>
@@ -224,6 +209,89 @@
         </div>
       </section>
 
+      <section class="testimonials section" id="students"> 
+        <div class="container">
+          <div class="title">
+            <h1>Mural dos Aprovados</h1>
+          </div>
+      
+          <div class="testimonial-slider"> 
+            <div class="testimonial-wrapper">
+              <div class="testimonial-card">
+                <p>Sempre tive muita dificuldade com matemática, mas tudo mudou quando conheci o professor Procopio. A forma como ele explica é tão clara e direta que comecei a entender assuntos que antes me assustavam. Graças à plataforma, consegui 920 no Enem e fui aprovado. </p>
+                <div class="testimonial-author">
+                  <img src="/imagens/aluno1.jpg" alt="Lucas Menezes">
+                  <div>
+                    <strong>Lucas Menezes</strong>
+                    <span> Medicina Veterinária | UFRJ</span>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="testimonial-card">
+                <p>Nunca fui boa com exatas e já tinha quase desistido do Enem, até começar a estudar com a plataforma do Procopio. As aulas são envolventes, os exercícios ajudam muito, e eu finalmente consegui aprender de verdade. Com isso, conquistei uma bolsa integral para Administração.</p>
+                <div class="testimonial-author">
+                  <img src="/imagens/aluno2.jpg" alt="Juliana Carvalho">
+                  <div>
+                    <strong>Juliana Carvalho</strong>
+                    <span> Administração| PROUNI</span>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="testimonial-card">
+                <p>Estudar com o professor Procopio foi um divisor de águas na minha preparação. Fiz o intensivo pela plataforma e, com muito foco, consegui resolver até as questões mais difíceis. No fim, tirei 960 em matemática no Enem, algo que antes parecia impossível pra mim. Obrigada por tudo, professor!</p>
+                <div class="testimonial-author">
+                  <img src="/imagens/aluno3.jpg" alt="Pedro Souza">
+                  <div>
+                    <strong>Pedro Souza</strong>
+                    <span>Medicina | UFBA </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <p>A matemática sempre foi meu ponto fraco, e isso me deixava insegura para prestar vestibular. Quando conheci a plataforma do professor Procopio, percebi que aprender podia ser leve e eficiente ao mesmo tempo. Estudei com ela durante todo o ano e hoje realizo o sonho de cursar Arquitetura.</p>
+                <div class="testimonial-author">
+                  <img src="/imagens/aluno4.jpg" alt="Renata Lima">
+                  <div>
+                    <strong>Renata Lima</strong>
+                    <span>Arquitetura | USP</span>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="testimonial-card">
+                <p>Passei anos achando que matemática não era pra mim, até conhecer a didática do professor Procopio. Pela primeira vez, consegui acompanhar as aulas e entender o raciocínio por trás dos exercícios. Estudei com dedicação e alcancei 980 na prova do Enem. Valeu, professor!</p>
+                <div class="testimonial-author">
+                  <img src="/imagens/aluno5.jpg" alt="Carlos Eduardo">
+                  <div>
+                    <strong>Carlos Eduardo</strong>
+                    <span>Engenharia | UFMG</span>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="testimonial-card">
+                <p>Sempre tive facilidade com arte e criatividade, mas matemática era meu maior desafio no vestibular. Conheci a plataforma do professor Procopio por indicação de uma amiga e me surpreendi com a didática. Consegui minha aprovação no curso de Design de Moda que sempre sonhei.</p>
+                <div class="testimonial-author">
+                  <img src="imagens/aluno6.jpg" alt="Bárbara Destazio">
+                  <div>
+                    <strong>Bárbara Destazio</strong>
+                    <span> Moda | PUC-Campinas</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="testimonial-buttons">
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section class="section more">
         <div class="row container">
           <div class="col">
@@ -257,6 +325,87 @@
           </div>
         </div>
       </section>
+
+      <section class="section faq" id="faq">
+        <div class="title">
+          <h1>Dúvidas Frequentes</h1>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            Qual a diferença do YouTube e o Site?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Na plataforma você conta com planos de estudos, listas de exercícios, aulas ao vivo e simulados. O professor
+              ainda vai continuar a produção da playlist exclusivamente sobre o assunto que será postado apenas em nosso
+              site. Temos vários outros vídeos exclusivos e muito mais virão.
+            </p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            O site é focado para CONCURSO?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              O site é focado na preparação para o Enem, mas também dá suporte a outros cursos. Para quem vai fazer concursos, a recomendação é analisar o edital e provas anteriores. Assim, é possível identificar os assuntos mais cobrados. O conteúdo pode ser adaptado conforme a necessidade do aluno. A plataforma ajuda a direcionar os estudos de forma eficiente.
+            </p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            As aulas são gravadas ou ao vivo?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Alunos assinantes recebem semanalmente um Plano de Estudos com aulas gravadas, exercícios, simulados e mais. As aulas ao vivo são gratuitas e abertas a todos, mediante cadastro no "Experimente Grátis". Basta acessar no dia e horário marcados pelo professor. Após a transmissão, as aulas são editadas e inseridas na plataforma. Cadastre-se na newsletter para receber conteúdos e benefícios extras.
+            </p>
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <button class="faq-question">
+            O curso começou, posso me inscrever?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Sim, é possível começar após o início da turma, mas quanto mais tempo demorar, mais difícil será acompanhar o conteúdo acumulado. O ideal é iniciar em até 15 dias após o começo. Após esse prazo, o rendimento pode ser prejudicado. Nas duas primeiras semanas, os planos são mais leves para facilitar a adaptação. Em caso de dúvidas, entre em contato pelo e-mail contato@matematicario.com.br.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Assinatura e Pagamento
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Para acessar todo o conteúdo do Matemática Rio com o Prof. Rafael Procopio, é necessário ter uma assinatura. Você pode escolher planos de 6, 9 ou 12 meses, conforme a disponibilidade. O plano ideal é o que cobre todo seu período de estudos, como o anual para o curso Extensivo. O pagamento pode ser feito via boleto ou cartão, com várias bandeiras aceitas. Dúvidas podem ser enviadas para contato@matematicario.com.br.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Cancelamento
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Você pode solicitar o cancelamento do plano em até 7 dias após a compra, com reembolso total. Para pagamentos por cartão, o estorno será feito em até 60 dias. Para boletos, o reembolso será via depósito em conta corrente em até 7 dias. Após esse prazo, não há reembolso. Em caso de dúvidas, entre em contato.
+            </p>
+          </div>
+        </div>
+      </section>
+      
 
       <section class="section newsletter">
         <div class="row container">
@@ -306,9 +455,9 @@
         </div>
     
         <div class="col">
-          <h3>Matematica Rio</h3>
+          <h3>Matemática Rio</h3>
           <a href="#">
-            ©2025 TDAH e cia.
+            ©2025 Matematica Rio
             <br>Todos os direitos reservados.
             <br>CNPJ: 20.171.612/0001-54
           </a>
@@ -336,7 +485,7 @@
               <img src="./imagens/iconetelegram.png" alt="Telegram">
             </a>
           </div>
-        </div>        
+        </div>
     </footer>
     
 
