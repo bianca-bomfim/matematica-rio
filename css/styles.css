@@ -799,7 +799,7 @@ html.dark-mode .switch-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 9rem;
+  margin-bottom: 4rem;
 }
 
 .more .col .btn {
@@ -1033,7 +1033,7 @@ html.dark-mode .switch-btn {
 
 /* ================= FAQ ================= */
 .faq {
-  padding: 8rem 0;
+  padding: 4rem 0;
 }
 
 .faq .title {
@@ -1121,7 +1121,7 @@ html.dark-mode .switch-btn {
 /* =================== TESTIMONIALS =================== */
 .testimonials {
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .testimonials .title {
@@ -1130,7 +1130,7 @@ html.dark-mode .switch-btn {
 
 .testimonial-slider {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   padding-top: 3rem; 
   padding-bottom: 3rem;
 }
