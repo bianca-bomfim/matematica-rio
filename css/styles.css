@@ -1,7 +1,6 @@
-/* =========== Fonts ============ */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
-/* =========== Variáveis padrão ============ */
+/* =========== Modo claro ============ */
 :root {
   --primary: #ffc400;
   --text-1: #0f2341;
@@ -13,7 +12,7 @@
   --transition-500: all 500ms ease-in-out;
 }
 
-/* =========== Variáveis modo escuro ============ */
+/* =========== Modo escuro ============ */
 html.dark-mode {
   --primary: #ffc400;
   --text-1: #ffffffe0;
@@ -25,7 +24,6 @@ html.dark-mode {
   --transition-500: all 500ms ease-in-out;
 }
 
-/* Reset e base */
 *,
 *::after,
 *::before {
@@ -49,7 +47,6 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Fundo e texto no modo escuro */
 html.dark-mode body {
   background-color: #121212;
   color: #eee;
@@ -81,7 +78,7 @@ video {
   height: 100%;
 }
 
-/* ======== SWITCH DE TEMA ======== */
+/* ======== Troca do Tema ======== */
 .theme-switch {
   position: absolute;
   top: 20px;
@@ -1227,19 +1224,23 @@ button.next:hover {
 /* =================== RESPONSIVO =================== */
 @media (max-width: 1200px) {
   .testimonial-card {
-    flex: 0 0 calc(100% / 2 - 1rem); /* tablet */
+    flex: 0 0 calc(100% / 2 - 1rem); 
   }
 }
 
 @media (max-width: 768px) {
   .testimonial-wrapper {
+    display: flex;
     flex-direction: row;
+    overflow: hidden; 
   }
 
   .testimonial-card {
-    flex: 0 0 100%; /* mobile */
+    flex: 0 0 100%; 
+    max-width: 100%;
   }
 }
+
 
 
 
