@@ -1,4 +1,4 @@
-// Navigation Toggle
+// Naveçação
 const hamburger = document.querySelector(".hamburger");
 const navList = document.querySelector(".nav-list");
 
@@ -6,7 +6,7 @@ hamburger.addEventListener("click", () => {
   navList.classList.toggle("open");
 });
 
-// Discount Media
+// midia
 const video = document.querySelector(".video");
 const button = document.querySelector(".video-control");
 
@@ -175,7 +175,6 @@ prev.addEventListener('click', () => {
 
 // redimensionamento da tela
 window.addEventListener('resize', () => {
-  // opcional: alinhar no card certo quando a tela muda
   container.scrollTo({ left: 0, behavior: 'auto' });
 });
 
@@ -227,6 +226,4 @@ window.onclick = function(event) {
     closeVideo();
   }
 }
-
-
-
+  
