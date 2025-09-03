@@ -129,37 +129,41 @@ faqItems.forEach(item => {
   });
 });
 
-//depoimento
+// depoimento
 const container = document.querySelector('.testimonial-wrapper');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
-
 const cards = document.querySelectorAll('.testimonial-card');
 const gap = 20;
-const cardsPerView = 3;
-const scrollStep = (cards[0].offsetWidth + gap) * cardsPerView;
 
-cards.forEach(card => {
-  const clone = card.cloneNode(true);
-  container.appendChild(clone);
-});
+function getCardsPerView() {
+  if (window.innerWidth <= 768) return 1;   // mobile
+  if (window.innerWidth <= 1200) return 2;  // tablet
+  return 3;                                 // desktop
+}
+
+function getScrollStep() {
+  const cardWidth = cards[0].offsetWidth + gap;
+  return cardWidth * getCardsPerView();
+}
 
 // Evento NEXT
 next.addEventListener('click', () => {
+  const scrollStep = getScrollStep();
   const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
   container.scrollBy({ left: scrollStep, behavior: 'smooth' });
 
-  // Se chegou no clone (parte extra), reseta para o começo após a animação
   setTimeout(() => {
     if (container.scrollLeft >= maxScrollLeft - (scrollStep / 2)) {
       container.scrollTo({ left: 0, behavior: 'auto' });
     }
-  }, 500); 
+  }, 500);
 });
 
 // Evento PREV
 prev.addEventListener('click', () => {
+  const scrollStep = getScrollStep();
   if (container.scrollLeft <= 0) {
     const maxScrollLeft = container.scrollWidth - container.clientWidth;
     container.scrollTo({ left: maxScrollLeft, behavior: 'auto' });
@@ -167,6 +171,12 @@ prev.addEventListener('click', () => {
   } else {
     container.scrollBy({ left: -scrollStep, behavior: 'smooth' });
   }
+});
+
+// redimensionamento da tela
+window.addEventListener('resize', () => {
+  // opcional: alinhar no card certo quando a tela muda
+  container.scrollTo({ left: 0, behavior: 'auto' });
 });
 
 

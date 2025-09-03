@@ -1,7 +1,6 @@
-/* =========== Fonts ============ */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
-/* =========== Variáveis padrão ============ */
+/* =========== Modo claro ============ */
 :root {
   --primary: #ffc400;
   --text-1: #0f2341;
@@ -13,7 +12,7 @@
   --transition-500: all 500ms ease-in-out;
 }
 
-/* =========== Variáveis modo escuro ============ */
+/* =========== Modo escuro ============ */
 html.dark-mode {
   --primary: #ffc400;
   --text-1: #ffffffe0;
@@ -48,7 +47,10 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+<<<<<<< HEAD
 /* cores do modo escuro */
+=======
+>>>>>>> d179e1e4710426b130b5b08f4061fb4d5a809a04
 html.dark-mode body {
   background-color: #121212;
   color: #eee;
@@ -80,12 +82,16 @@ video {
   height: 100%;
 }
 
-/* ======== SWITCH DE TEMA ======== */
+/* ======== Troca do Tema ======== */
 .theme-switch {
   position: absolute;
   top: 20px;
   right: 20px;
+<<<<<<< HEAD
   width: 100px;
+=======
+  width: 100px; 
+>>>>>>> d179e1e4710426b130b5b08f4061fb4d5a809a04
   height: 36px;
   background-color: #f1f1f1;
   border-radius: 50px;
@@ -801,7 +807,7 @@ html.dark-mode .switch-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 9rem;
+  margin-bottom: 4rem;
 }
 
 .more .col .btn {
@@ -1035,7 +1041,7 @@ html.dark-mode .switch-btn {
 
 /* faq de duvidas*/
 .faq {
-  padding: 8rem 0;
+  padding: 4rem 0;
 }
 
 .faq .title {
@@ -1123,7 +1129,7 @@ html.dark-mode .switch-btn {
 /* seção testimonials*/
 .testimonials {
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .testimonials .title {
@@ -1132,7 +1138,7 @@ html.dark-mode .switch-btn {
 
 .testimonial-slider {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   padding-top: 3rem; 
   padding-bottom: 3rem;
 }
@@ -1226,17 +1232,20 @@ button.next:hover {
 /* responsivo */
 @media (max-width: 1200px) {
   .testimonial-card {
-    flex: 0 0 calc(100% / 2 - 1rem); /* tablet */
+    flex: 0 0 calc(100% / 2 - 1rem); 
   }
 }
 
 @media (max-width: 768px) {
   .testimonial-wrapper {
+    display: flex;
     flex-direction: row;
+    overflow: hidden; 
   }
 
   .testimonial-card {
-    flex: 0 0 100%; /* mobile */
+    flex: 0 0 100%; 
+    max-width: 100%;
   }
 }
 
@@ -1244,3 +1253,9 @@ button.next:hover {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d179e1e4710426b130b5b08f4061fb4d5a809a04
