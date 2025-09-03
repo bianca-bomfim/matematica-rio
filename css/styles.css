@@ -25,7 +25,6 @@ html.dark-mode {
   --transition-500: all 500ms ease-in-out;
 }
 
-/* Reset e base */
 *,
 *::after,
 *::before {
@@ -49,7 +48,7 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Fundo e texto no modo escuro */
+/* cores do modo escuro */
 html.dark-mode body {
   background-color: #121212;
   color: #eee;
@@ -86,14 +85,14 @@ video {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 100px; /* 🔸 Diminui na largura */
+  width: 100px;
   height: 36px;
   background-color: #f1f1f1;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: center; /* 🔸 Centraliza tudo */
-  gap: 8px; /* 🔸 Espaço entre a bolinha e o texto */
+  justify-content: center; 
+  gap: 8px; 
   padding: 4px 8px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px;
   cursor: pointer;
@@ -634,7 +633,7 @@ html.dark-mode .switch-btn {
   color: red;
 }
 
-/* ===== Responsivo ===== */
+/* Responsivo */
 @media (max-width: 768px) {
   .service .row {
     grid-template-columns: 1fr;
@@ -915,7 +914,7 @@ html.dark-mode .switch-btn {
   height: 100%;
 }
 
-/* =================== RESPONSIVO =================== */
+/* responsivo */
 @media (max-width: 567px) {
   .contact .title p {
     width: 90%;
@@ -947,7 +946,7 @@ html.dark-mode .switch-btn {
   }
 }
 
-/* =================== FOOTER =================== */
+/* footer */
 .footer {
   background-color: var(--text-1);
 }
@@ -1017,7 +1016,7 @@ html.dark-mode .switch-btn {
 
 
 
-/* =================== LOADER =================== */
+/* loader*/
 .loader {
   position: fixed;
   width: 100vw;
@@ -1034,7 +1033,7 @@ html.dark-mode .switch-btn {
   height: 20rem;
 }
 
-/* ================= FAQ ================= */
+/* faq de duvidas*/
 .faq {
   padding: 8rem 0;
 }
@@ -1109,7 +1108,7 @@ html.dark-mode .switch-btn {
   transform: rotate(45deg);
 }
 
-/* ================= RESPONSIVO ================= */
+/* responsivo */
 @media (max-width: 567px) {
   .faq .faq-question {
     font-size: 1.7rem;
@@ -1121,7 +1120,7 @@ html.dark-mode .switch-btn {
   }
 }
 
-/* =================== TESTIMONIALS =================== */
+/* seção testimonials*/
 .testimonials {
   text-align: center;
   padding: 6rem 2rem;
@@ -1199,7 +1198,7 @@ html.dark-mode .switch-btn {
   font-size: 1.5rem;
 }
 
-/* =================== BUTTONS =================== */
+/* botões */
 .testimonial-buttons {
   display: flex;
   justify-content: center;
@@ -1224,7 +1223,7 @@ button.next:hover {
   filter: brightness(1.1);
 }
 
-/* =================== RESPONSIVO =================== */
+/* responsivo */
 @media (max-width: 1200px) {
   .testimonial-card {
     flex: 0 0 calc(100% / 2 - 1rem); /* tablet */
@@ -1240,8 +1239,6 @@ button.next:hover {
     flex: 0 0 100%; /* mobile */
   }
 }
-
-
 
 
 
