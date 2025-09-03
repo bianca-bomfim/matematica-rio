@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
-/* =========== Modo claro ============ */
+/* Modo claro */
 :root {
   --primary: #ffc400;
   --text-1: #0f2341;
@@ -12,7 +12,7 @@
   --transition-500: all 500ms ease-in-out;
 }
 
-/* =========== Modo escuro ============ */
+/* Modo escuro */
 html.dark-mode {
   --primary: #ffc400;
   --text-1: #ffffffe0;
@@ -47,10 +47,7 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-<<<<<<< HEAD
 /* cores do modo escuro */
-=======
->>>>>>> d179e1e4710426b130b5b08f4061fb4d5a809a04
 html.dark-mode body {
   background-color: #121212;
   color: #eee;
@@ -82,16 +79,12 @@ video {
   height: 100%;
 }
 
-/* ======== Troca do Tema ======== */
+/* Troca no Tema  */
 .theme-switch {
   position: absolute;
   top: 20px;
   right: 20px;
-<<<<<<< HEAD
   width: 100px;
-=======
-  width: 100px; 
->>>>>>> d179e1e4710426b130b5b08f4061fb4d5a809a04
   height: 36px;
   background-color: #f1f1f1;
   border-radius: 50px;
@@ -1248,14 +1241,3 @@ button.next:hover {
     max-width: 100%;
   }
 }
-
-
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> d179e1e4710426b130b5b08f4061fb4d5a809a04
