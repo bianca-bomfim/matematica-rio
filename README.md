@@ -98,3 +98,5 @@ Desenvolvido com a colaboração direta do Professor Procópio, o projeto teve c
 ## ✨ Quer ver a plataforma em ação? 
 
 Explore a interface moderna, teste a alternância entre os temas claro e escuro, navegue pelo carrossel de conteúdos e confira como a experiência do usuário foi pensada para ser simples e agradável. Clique, explore e descubra como o design pode transformar a aprendizagem de matemática!
+
+[Clique aqui para acessar o projeto e começar!](https://matematica-rio.vercel.app/)
