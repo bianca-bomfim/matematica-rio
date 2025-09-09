@@ -4,9 +4,6 @@ Este projeto consiste na reformulação completa do front-end da plataforma do P
 
 Desenvolvido com a colaboração direta do Professor Procópio, o projeto teve caráter voluntário e acadêmico, sendo parte de nossas atividades da faculdade. O objetivo principal foi melhorar a experiência do usuário, otimizar a navegação e modernizar o design da plataforma, mantendo a funcionalidade e a praticidade do sistema original.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/bianca-bomfim/amigo-secreto)
-![GitHub stars](https://img.shields.io/github/stars/bianca-bomfim/amigo-secreto?style=social)
-
 ---
 
 ## 📌 Índice
