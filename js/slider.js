@@ -14,7 +14,6 @@ const swiper2 = new Swiper(".slider-2", {
   autoHeight: true,
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
 });
 

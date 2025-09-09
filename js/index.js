@@ -67,13 +67,13 @@ scroll.reveal(`.content h1, .content .btn`, {
   interval: 100,
 });
 
-scroll.reveal(`.about .col h1, .about .col p, .about .col .btn`, {
+scroll.reveal(`.course .col h1, .course .col p, .course .col .btn`, {
   origin: "left",
   interval: 150,
 });
 
 scroll.reveal(
-  `.about .col:last-child,.contact .location,.more .col:last-child,.newsletter .form`,
+  `.course .col:last-child,.contact .location,.more .col:last-child,.newsletter .form`,
   {
     origin: "right",
   }
@@ -83,11 +83,11 @@ scroll.reveal(`.service img,.contact .title`, {
   origin: "top",
 });
 
-scroll.reveal(`.service .col,.trip .row`, {
+scroll.reveal(`.service .col,.module .row`, {
   origin: "bottom",
 });
 
-scroll.reveal(`.trip .title,.more .col:first-child,.newsletter .col`, {
+scroll.reveal(`.module .title,.more .col:first-child,.newsletter .col`, {
   origin: "left",
 });
 
